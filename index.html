@@ -1,0 +1,48 @@
+<html ng-app="app">
+<head>
+  <title>AngularJS + Protractor Example</title>
+
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <script src="node_modules/angular/angular.min.js"></script>
+
+  <!-- app -->
+  <script src="js/app/app.js"></script>
+
+  <!-- service -->
+  <script src="js/service/lista-tarefas-service.js"></script>
+
+  <!-- controller -->
+  <script src="js/controller/lista-tarefas-controller.js"></script>
+</head>
+<body ng-controller="ListaTarefasController as vm">
+  <div class="container">
+      <div class="page-header">
+        <h1>AngularJS + Protractor</h1>
+      </div>
+      <form>
+        <div class="form-group">
+          <div class="input-group">
+            <input type="text" ng-model="vm.itemDescricao" class="form-control" placeholder="Descrição">
+            <div class="input-group-btn">
+              <button class="btn btn-success" ng-model="vm.adicionarItem" ng-click="vm.adicionarItem()">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="form-group">
+        <ul class="list-group">
+          <li href="#" class="list-group-item active">
+            <h4 class="list-group-item-heading">Lista de tarefas</h4>
+          </li>
+          <li ng-repeat="item in vm.listaTarefa" ng-class="item.concluido ? 'list-group-item list-group-item-success' : 'list-group-item list-group-item-danger'">
+            <label class="list-group-item-text">
+              <input type="checkbox" ng-model="item.concluido" checked="item.concluido" />
+              {{ item.descricao }}
+            </label>
+          </li>
+        </ul>
+      </div>
+  </div>
+</body>
+</html>

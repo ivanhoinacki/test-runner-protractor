@@ -1,0 +1,16 @@
+{
+  "name": "angularjs-protractor-example",
+  "version": "1.0.0",
+  "description": "A simple application based on ExpressJS + AngularJS to show how Protractor works",
+  "author": "Eric Shigueo Yoshimura",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.7",
+    "bootstrap": "^3.3.5",
+    "express": "^4.13.3",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "protractor": "^2.5.1"
+  }
+}
